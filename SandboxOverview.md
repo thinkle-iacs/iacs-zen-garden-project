@@ -15,12 +15,9 @@ In this document, you will find:
 
 ## Running the Project
 
-1. Open the project in VS Code.
-2. Click on the "Run and Debug" button on the sidebar (it looks like a play button).
-3. Select "Open with Live Server" from the drop-down menu.
-4. Click the green play button. This will start a local server and open your project in a web browser.
-5. If this fails, you could try to [start from the terminal instead](#starting-from-the-terminal)
-   ![play-screenshot](screenshots/play-github.png)
+1. If you installed the recommended Liveserver extension, just right click on a file and click "Open with Liveserver"
+2. OR, you can use the DEBUG button and click "Play"
+3. OR, you can open the Terminal (bottom of screen), then type `npm start`
 
 ## Viewing Your Project
 

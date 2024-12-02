@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Web Design Project",
   "scripts": {
-    "start": "live-server --no-browser ./"
+    "start": "browser-sync start --server --files './*.html,./*.css'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "browser-sync": "^3.0.3"
   }
 }
