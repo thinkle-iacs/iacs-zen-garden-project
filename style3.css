@@ -29,8 +29,9 @@ h6 {
   text-shadow: 4px 4px 3px #2225;
 }
 
+/* Background */
 #css-zen-garden {
-  background: linear-gradient(90deg, #d1ece2 50%, #d9d2e0 50%);
+  /* Repeating stripes */
   background-size: 40px 40px;
   background-image: linear-gradient(
     45deg,
@@ -43,12 +44,13 @@ h6 {
     transparent
   );
 }
+/* Page wrapper */
 .page-wrapper {
   box-sizing: border-box;
   background: rgba(237, 254, 253, 0.9);
   border: 1px solid #ccc;
   padding: 1em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 960px;
+  max-width: 660px;
   margin: 0 auto;
 }
