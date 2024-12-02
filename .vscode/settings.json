@@ -1,0 +1,30 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "files.exclude" : {
+    "node_modules" : true,
+    ".git" : true,
+    "*.json" : true,
+    ".gitignore" : true,
+    ".vscode" : true,
+    ".github" : true,
+    "screenshots" : true,
+  }
+}

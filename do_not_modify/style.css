@@ -1,0 +1,212 @@
+/***
+ This code runs the overview view in
+ index.html.
+
+ NOT INTENDED TO BE MODIFIED BY STUDENTS
+ (though if you want to change colors or 
+ fonts or something, feel free)
+***/
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+main iframe {
+  width: 100%;
+  height: calc(100vh - 68px);
+  border: none;
+}
+
+main {
+  padding: 8px;
+}
+
+.sbs main > div {
+  border: 1px inset;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd; /* Adds a bottom border for the tab container */
+}
+
+nav a {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 3px solid transparent; /* Transparent border initially */
+  margin-right: 20px;
+  font-size: 16px;
+  transition: border-color 300ms, color 300ms;
+}
+
+nav a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+nav a.active {
+  border-bottom: 3px solid #007bff; /* Underline active tab */
+  color: #007bff;
+}
+
+.center figure {
+  display: grid;
+  grid-template-rows: 1fr auto; /* Image stretches, caption gets auto height */
+  grid-template-columns: 1fr; /* Single column */
+  align-items: center; /* Align items within their grid cells */
+  justify-items: center;
+  max-width: 100%; /* Prevent figure from overflowing horizontally */
+  max-height: 100%; /* Prevent figure from overflowing vertically */
+  margin: 0; /* Remove default margin */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.center img {
+  max-width: 100%; /* Ensure the image doesn’t overflow horizontally */
+  min-height: 100%; /* Force the image to fill the available height */
+  max-height: 100%; /* Ensure the image doesn’t overflow vertically */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits nicely */
+  grid-row: 1; /* Place the image in the first row */
+}
+
+.center figcaption {
+  max-width: 100%; /* Ensure caption doesn’t overflow */
+  word-wrap: break-word; /* Handle long words or links gracefully */
+  text-align: center; /* Center-align the caption text */
+  margin: 8px 0; /* Add spacing */
+  font-size: 14px; /* Adjust font size as needed */
+  grid-row: 2; /* Place the caption in the second row */
+}
+
+.content {
+  opacity: 0;
+  pointer-events: none;
+}
+.visible {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 500ms;
+}
+main {
+  position: relative;
+}
+main div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 4px);
+  height: calc(100vh - 66px);
+}
+
+/* Side-by-side code */
+
+.sbs main {
+  display: flex;
+  gap: 10px;
+}
+/* Get rid of absolute positioning we used for cross-fade */
+.sbs div {
+  position: initial;
+  box-sizing: border-box;
+}
+/* Just toggle display : block to display: none
+Old-school style... */
+.sbs .content {
+  display: none;
+}
+.sbs .visible {
+  display: block;
+}
+/* ALWAYS show the original */
+.sbs #original {
+  display: block;
+  opacity: 1;
+}
+.orig-link {
+  transition: opacity 300ms;
+}
+/* Don't show the original tab */
+.sbs .orig-link {
+  opacity: 0;
+}
+.sbs-toggle {
+  transition: opacity 300ms;
+}
+.original .sbs-toggle {
+  opacity: 0;
+}
+
+/* Popout link code */
+header {
+  position: sticky;
+  top: 0;
+  height: 48px;
+}
+.popout-bar {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+header:hover .popout-bar {
+  opacity: 1;
+}
+.popout-bar {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.popout-link {
+  display: none;
+  position: absolute;
+  right: -16px;
+  top: 0;
+  padding-top: 0;
+  margin-top: -4px;
+}
+nav span {
+  position: relative;
+}
+.imitation .popout-link.imitation {
+  display: inline-block;
+}
+.responsive .popout-link.responsive {
+  display: inline-block;
+}
+
+#minimize {
+  transition: transform 300ms;
+  background: transparent;
+  border: none;
+}
+header.minimized #minimize {
+  transform: rotate(180deg);
+}
+header {
+  transition: transform 300ms;
+  z-index: 2;
+}
+header nav {
+  height: 48px;
+  box-sizing: border-box;
+}
+.minimized {
+  transform: translateY(-48px);
+}
+.popout-link::after {
+  content: "↗";
+  font-size: 8px;
+  vertical-align: super;
+}

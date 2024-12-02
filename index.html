@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- 
+
+  THE ONLY THING YOU SHOULD HAVE TO CHANGE IN THIS
+  FILE IS THE IMAGE NAME, WHICH IS SET TO 
+
+  original.jpg
+
+  IF YOUR FILE WITH AN IMAGE OF YOUR LAYOUT HAS A DIFFERENT
+  NAME, CHANGE THE IMAGE TAG BELOW
+
+  -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Imitation Project</title>
+  <link href="do_not_modify/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="imitation">
+  <header>
+    <nav>
+      <a class="orig-link" href="#original">Original</a>
+      <span>
+        <a href="#imitation" class="active">Imitation</a>
+        <a href="imitation.html" class="popout-link imitation" target="_blank"></a>
+      </span>
+      <span>
+        <a href="#responsive" class="">Responsive Version</a>
+        <a href="responsive.html" class="popout-link responsive" target="_blank"></a>
+      </span>
+      <label class="sbs-toggle">
+        <input type="checkbox" id="sbs">
+        Side-by-side
+      </label>
+    </nav>
+    <div class="popout-bar">
+      <button id="minimize"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-up" viewBox="0 0 24 12">
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg></button>
+
+
+    </div>
+  </header>
+  <main>
+    <div id="original" class="content">
+      <div class="center">
+        <!-- IMAGE TAG BELOW -->
+        <!-- FIX SRC= AS NEEDED -->
+        <figure>
+          <img src="https://placehold.co/800x1600?text=Big+Picture" />
+          <!--<img src="original.jpg" />-->
+          <figcaption>
+            Original Layout from [note where the layout came from here]
+          </figcaption>
+        </figure>
+        <!-- END OF IMAGE TAG -->
+        <!-- NOTHING ELSE TO EDIT HERE -->
+      </div>
+    </div>
+    <div id="imitation" class="visible content">
+      <iframe src="imitation.html"></iframe>
+    </div>
+    <div id="responsive" class="content">
+      <iframe src="responsive.html"></iframe>
+    </div>
+  </main>
+
+  <script src="do_not_modify/script.js"></script>
+</body>
+
+</html>

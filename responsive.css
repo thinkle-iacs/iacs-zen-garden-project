@@ -1,0 +1,55 @@
+/* Code for all screen sizes */
+
+/* BEGIN MOBILE RULES */
+@media only screen and (max-width: 768px) {
+  /* Code for mobile phones only: */
+
+  /* Mobile label */
+  main::before {
+    content: "Mobile";
+    background-color: #c8787888;
+  }
+  /* End mobile label */
+}
+
+/* BEGIN MEDIUM WIDTH RULES */
+@media only screen and (min-width: 768px) and (max-width: 1399px) {
+  /* Code for medium width and bigger : */
+
+  /* Laptop label */
+  main::before {
+    content: "Laptop";
+    background-color: #45454588;
+  }
+  /* End laptop label */
+}
+
+/* BEGIN WIDE SCREEN RULES */
+@media only screen and (min-width: 1400px) {
+  /* Code for wide screen only */
+
+  /* Widescreen label */
+  main::before {
+    content: "Wide";
+    background-color: #00438888;
+  }
+  /* End widescreen label */
+}
+
+/* BACK TO CODE FOR ALL SIZES */
+
+/* Code to insert circular label label to show how responsive code is working on lower right */
+main::before {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  color: #efefef;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-family: Helvetica, sans-serif;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
